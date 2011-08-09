@@ -11,7 +11,7 @@ Tumblr, Blogspot & wordpress: automate the posting of sinks to blogs. the user g
 Main Page: continuous pagination of popular sinks
 Sink Show Page: continuous pagination of photos and sink_locations
 
-Logins:
+# Logins
 * log in
 * sessions
 * encrypt passwords
