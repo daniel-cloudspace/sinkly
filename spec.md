@@ -1,7 +1,7 @@
-==Abstract==
+# Abstract
 A Web2.0 website about sinks. Post sinks, download sinks, post sinks via mms, learn about sinks, post sinks to facebook and twitter, have sink.ly post to your tumblr, blogspot, or wordpress. 
 
-==Features==
+# Features
 Post sinks: photos, manufacturer, website, info, store locations, installation locations, extract location from exif data if present
 Download sinks: photos, pdf, printable output
 Post sink via mms: take a photo of a sink, upload via mms, assign to user account or create user accout for phone number to be associated with user account later
@@ -63,7 +63,7 @@ BlogSinks
 + sink_id, blog_id
 
 
-==Software Stack==
+# Software Stack
 * Ruby on Rails
 * MySQL
 * Unicorn
