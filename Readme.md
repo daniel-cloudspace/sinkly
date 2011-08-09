@@ -78,3 +78,5 @@ BlogSinks
 * 
 
 
+# Other Cloudspace Training Projects
+http://wiki.cloudspace.com/index.php/2011_Training
