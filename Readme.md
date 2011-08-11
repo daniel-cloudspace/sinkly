@@ -102,6 +102,11 @@ BlogSinks
 * MySQL
 * Unicorn
 * Nginx
+* Devise
+* Paperclip
+* Tropo
+* memcached
+* nodejs/socket.io (don't know what for yet)
 * 
 
 
