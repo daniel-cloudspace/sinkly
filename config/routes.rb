@@ -1,4 +1,6 @@
 Sinkly::Application.routes.draw do
+  namespace :admin do resources :baits end
+
   resources :fish
 
   # The priority is based upon order of creation:

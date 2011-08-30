@@ -15,7 +15,7 @@ development:
   database: sinkly_development
   pool: 5
   username: root
-  password:
+  password: password
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: sinkly_test
   pool: 5
   username: root
-  password:
+  password: password
   host: localhost
 
 production:
@@ -38,5 +38,5 @@ production:
   database: sinkly_production
   pool: 5
   username: root
-  password:
+  password: password
   host: localhost
