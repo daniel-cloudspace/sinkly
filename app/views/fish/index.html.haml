@@ -1,0 +1,19 @@
+%h1 Listing fish
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @fish.each do |fish|
+    %tr
+      %td= fish.name
+      %td= link_to 'Show', fish
+      %td= link_to 'Edit', edit_fish_path(fish)
+      %td= link_to 'Destroy', fish, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Fish', new_fish_path
