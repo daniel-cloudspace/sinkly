@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @sink_category.name
+%p
+  %b Photo file name:
+  = @sink_category.photo_file_name
+%p
+  %b Photo content type:
+  = @sink_category.photo_content_type
+%p
+  %b Photo file size:
+  = @sink_category.photo_file_size
+%p
+  %b Photo udpated at:
+  = @sink_category.photo_udpated_at
+%p
+  %b User:
+  = @sink_category.user_id
+
+= link_to 'Edit', edit_sink_category_path(@sink_category)
+\|
+= link_to 'Back', sink_categories_path

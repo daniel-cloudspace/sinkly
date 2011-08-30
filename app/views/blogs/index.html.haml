@@ -1,27 +1,33 @@
-%h1 Listing blogs
-
-%table
-  %tr
-    %th Url
-    %th Icon
-    %th Username
-    %th Password
-    %th Type
-    %th
-    %th
-    %th
-
-  - @blogs.each do |blog|
-    %tr
-      %td= blog.url
-      %td= blog.icon
-      %td= blog.username
-      %td= blog.password
-      %td= blog.type
-      %td= link_to 'Show', blog
-      %td= link_to 'Edit', edit_blog_path(blog)
-      %td= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Blog', new_blog_path
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active= link_to "#{t("web-app-theme.list", :default => "List")}", blogs_path
+      %li= link_to "#{t("web-app-theme.new", :default => "New")}", new_blog_path
+  .content
+    %h2.title
+      = t("web-app-theme.all", :default => "All")
+      Blogs
+    .inner
+      %table.table
+        %tr
+          %th.first ID
+          %th
+            = t("activerecord.attributes.blog.url", :default => t("activerecord.labels.url", :default => "Url"))
+          %th= t("web-app-theme.created_at", :default => "Created at")
+          %th.last &nbsp;
+        - @blogs.each do |blog|
+          %tr{:class => cycle("odd", "even")}
+            %td
+              = blog.id
+            %td
+              = link_to blog.url, blog_path(blog)
+            %td
+              = blog.created_at
+            %td.last
+              = link_to "#{t("web-app-theme.show", :default => "Show")}", blog_path(blog)
+              |
+              \#{link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_blog_path(blog)} |
+              \#{link_to "#{t("web-app-theme.delete", :default => "Delete")}", blog_path(blog), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}"}
+      .actions-bar.wat-cf
+        .actions
+- content_for :sidebar, render(:partial => 'sidebar')

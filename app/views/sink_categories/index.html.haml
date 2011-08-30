@@ -1,0 +1,29 @@
+%h1 Listing sink_categories
+
+%table
+  %tr
+    %th Name
+    %th Photo file name
+    %th Photo content type
+    %th Photo file size
+    %th Photo udpated at
+    %th User
+    %th
+    %th
+    %th
+
+  - @sink_categories.each do |sink_category|
+    %tr
+      %td= sink_category.name
+      %td= sink_category.photo_file_name
+      %td= sink_category.photo_content_type
+      %td= sink_category.photo_file_size
+      %td= sink_category.photo_udpated_at
+      %td= sink_category.user_id
+      %td= link_to 'Show', sink_category
+      %td= link_to 'Edit', edit_sink_category_path(sink_category)
+      %td= link_to 'Destroy', sink_category, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Sink category', new_sink_category_path

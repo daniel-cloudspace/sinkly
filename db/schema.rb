@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110830140132) do
+ActiveRecord::Schema.define(:version => 20110830145005) do
 
   create_table "admin_baits", :force => true do |t|
     t.string   "name"
@@ -19,8 +19,29 @@ ActiveRecord::Schema.define(:version => 20110830140132) do
     t.datetime "updated_at"
   end
 
+  create_table "blogs", :force => true do |t|
+    t.string   "url"
+    t.string   "icon"
+    t.string   "username"
+    t.string   "password"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "fish", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sink_categories", :force => true do |t|
+    t.string   "name"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_udpated_at"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

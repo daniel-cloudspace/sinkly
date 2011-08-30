@@ -1,0 +1,2 @@
+module SinkCategoriesHelper
+end
