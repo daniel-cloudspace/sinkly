@@ -14,7 +14,13 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"
   gem 'uglifier'
+  gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
 end
+
+gem 'haml-rails'
+gem 'therubyracer'
+gem 'hpricot'
+gem 'ruby_parser'
 
 
 
@@ -27,7 +33,9 @@ end
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'web-app-theme', :git => 'https://github.com/jweslley/web-app-theme.git'
+  gem 'rspec-rails'
 end
