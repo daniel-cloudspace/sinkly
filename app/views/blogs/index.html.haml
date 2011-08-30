@@ -1,0 +1,27 @@
+%h1 Listing blogs
+
+%table
+  %tr
+    %th Url
+    %th Icon
+    %th Username
+    %th Password
+    %th Type
+    %th
+    %th
+    %th
+
+  - @blogs.each do |blog|
+    %tr
+      %td= blog.url
+      %td= blog.icon
+      %td= blog.username
+      %td= blog.password
+      %td= blog.type
+      %td= link_to 'Show', blog
+      %td= link_to 'Edit', edit_blog_path(blog)
+      %td= link_to 'Destroy', blog, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Blog', new_blog_path

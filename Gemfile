@@ -21,6 +21,7 @@ gem 'haml-rails'
 gem 'therubyracer'
 gem 'hpricot'
 gem 'ruby_parser'
+gem 'web-app-theme', :git => 'git://github.com/jweslley/web-app-theme.git'
 
 
 
@@ -36,6 +37,5 @@ gem 'ruby_parser'
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
-  gem 'web-app-theme', :git => 'https://github.com/jweslley/web-app-theme.git'
   gem 'rspec-rails'
 end

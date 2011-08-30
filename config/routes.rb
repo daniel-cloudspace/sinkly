@@ -1,4 +1,6 @@
 Sinkly::Application.routes.draw do
+  resources :blogs
+
   namespace :admin do resources :baits end
 
   resources :fish

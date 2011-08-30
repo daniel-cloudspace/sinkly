@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Url:
+  = @blog.url
+%p
+  %b Icon:
+  = @blog.icon
+%p
+  %b Username:
+  = @blog.username
+%p
+  %b Password:
+  = @blog.password
+%p
+  %b Type:
+  = @blog.type
+
+= link_to 'Edit', edit_blog_path(@blog)
+\|
+= link_to 'Back', blogs_path

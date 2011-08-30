@@ -9,7 +9,7 @@ GIT
       sass (~> 3.1)
 
 GIT
-  remote: https://github.com/jweslley/web-app-theme.git
+  remote: git://github.com/jweslley/web-app-theme.git
   revision: 803d64e59bdb1514bc7b30660d1ae70e9b520e2a
   specs:
     web-app-theme (0.7.0)
