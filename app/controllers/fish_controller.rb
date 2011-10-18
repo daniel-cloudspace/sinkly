@@ -1,4 +1,6 @@
 class FishController < ApplicationController
+  caches_pages :index, :show
+  
   # GET /fish
   # GET /fish.json
   def index
